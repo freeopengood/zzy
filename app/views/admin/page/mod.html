@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ewshop后台管理 - 修改单页</title>
+	<link type="text/css" rel="stylesheet" href="../../app/views/admin/resource/css/style.css" />
+	<script type="text/javascript" src="../../app/views/public/js/jquery.js"></script>
+	<script type="text/javascript" src="../../app/views/public/js/global.js"></script>
+</head>
+<div class="bgimg"></div>
+<div class="pagetop">
+	<div class="head">
+		<div class="logo fl"><img src="../../app/views/admin/resource/images/logo.png" /></div>
+
+		<div class="admin_t fr">
+			<ul>
+				<li><a href="/"><img border=0 src="../../app/views/admin/resource/images/exit4.gif"></a></li>
+				<li><a href="/admin/login/logout" onclick="return confirm('你确定要退出系统吗？')" ><img border=0 src="../../app/views/admin/resource/images/exit3.gif"></a></li>
+			</ul>
+		</div>
+
+		<div class="admin_u fr">
+			<b>欢迎您-</b><a title="" target="_top" href="">admin</a>&nbsp;【超级管理员】 &nbsp;&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="main">
+		<div class="left">
+			<div class="fenlei">
+				<h3>商品管理</h3>
+				<ul>
+
+					<li  ><a href="/admin/category">商品分类</a></li>
+
+					<li  ><a href="/admin/product">商品列表</a></li>
+
+					<li  ><a href="/admin/ask">商品咨询</a></li>
+
+					<li  ><a href="/admin/comment">商品评价</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>交易管理</h3>
+				<ul>
+
+					<li  ><a href="/admin/order">订单管理</a></li>
+
+					<li  ><a href="/admin/payway">支付方式</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>信息管理</h3>
+				<ul>
+
+					<li  ><a href="/admin/aclass">文章分类</a></li>
+
+					<li  ><a href="/admin/article?cid=0">文章列表</a></li>
+
+					<li  class="sel"  ><a href="/admin/page">单页列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>用户管理</h3>
+				<ul>
+
+					<li  ><a href="/admin/user">会员列表</a></li>
+
+					<li  ><a href="/admin/adminuser">管理列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>控制面板</h3>
+				<ul>
+
+					<li  ><a href="/admin/setting">基本信息</a></li>
+
+					<li  ><a href="/admin/link">友情链接</a></li>
+
+					<li  ><a href="/admin/ad">广告列表</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="right">
+			<div class="now">
+				<div class="now_l"></div>
+				<div class="now_m">
+					<span class="fl">修改单页</span>
+					<span class="fr fabu"><a href="/admin/page/add">增加单页</a></span>
+				</div>
+				<div class="now_r"></div>
+				<div class="clear"></div>
+			</div>
+			<form method="post" action="/admin/page/doupdate">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="wenzhang">
+					<input type="hidden" name="id" value="13" />
+					<tr>
+						<td class="bg_f8" align="right" width="100">单页名称：</td>
+						<td><input type="text" name="name" value="退换货流程" class="inputall input500" /></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+				<textarea name="content" id="edit_body" class="form-control float-left col-9" placeholder="" rows="4" resize="none">&lt;div class=&quot;c-line-clamp3&quot; style=&quot;line-height: 24px; color: #333333; font-family: Arial, sans-serif; font-size: 14px; background-color: #ffffff;&quot; data-a-5fa5e84a=&quot;&quot;&gt;
+&lt;div class=&quot;&quot; style=&quot;line-height: 24px;&quot; data-visited=&quot;off&quot; data-a-5fa5e84a=&quot;&quot;&gt;&lt;span class=&quot;wenda-abstract-listnum&quot; style=&quot;margin-right: 3px;&quot; data-a-5fa5e84a=&quot;&quot;&gt;1.&lt;/span&gt;&lt;span data-a-5fa5e84a=&quot;&quot;&gt;先进入到EWShop界面，点击右下方&amp;ldquo;我的EW&amp;rdquo;，进入&amp;ldquo;我的EW&amp;rdquo;界面。&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-line-clamp3&quot; style=&quot;line-height: 24px; color: #333333; font-family: Arial, sans-serif; font-size: 14px; background-color: #ffffff;&quot; data-a-5fa5e84a=&quot;&quot;&gt;
+&lt;div class=&quot;&quot; style=&quot;line-height: 24px;&quot; data-visited=&quot;off&quot; data-a-5fa5e84a=&quot;&quot;&gt;&lt;span class=&quot;wenda-abstract-listnum&quot; style=&quot;margin-right: 3px;&quot; data-a-5fa5e84a=&quot;&quot;&gt;2.&lt;/span&gt;&lt;span data-a-5fa5e84a=&quot;&quot;&gt;点击&amp;ldquo;待发货&amp;rdquo;选项，进入待发货界面即可查看订单详情。&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-line-clamp3&quot; style=&quot;line-height: 24px; color: #333333; font-family: Arial, sans-serif; font-size: 14px; background-color: #ffffff;&quot; data-a-5fa5e84a=&quot;&quot;&gt;
+&lt;div class=&quot;&quot; style=&quot;line-height: 24px;&quot; data-visited=&quot;off&quot; data-a-5fa5e84a=&quot;&quot;&gt;&lt;span class=&quot;wenda-abstract-listnum&quot; style=&quot;margin-right: 3px;&quot; data-a-5fa5e84a=&quot;&quot;&gt;3.&lt;/span&gt;&lt;span data-a-5fa5e84a=&quot;&quot;&gt;点击&amp;ldquo;退款&amp;rdquo;选项，进入到申请退款界面，点击&amp;ldquo;退款原因&amp;rdquo;选择一个退款原因，点击&amp;ldquo;提交&amp;rdquo;完成退货，等待商家退款处理即可。&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</textarea>
+
+							<script src="../../app/views/public/js/tinymce/tinymce.min.js"></script>
+
+							<script src="../../app/views/public/js/fwb.js"></script>
+
+						</td>
+					</tr>
+				</table>
+				<div class="mat10 center"><input type="submit" name="do_submit" value="提 交" class="tjbtn" /></div>
+			</form>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2018-2021 <a target="_blank" href="http://www.broshop.com">学习猿地 - <b>eduwork</b></a> 版权所有</div>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		$(".list").find("tr").hover(
+				function(){
+					if ($(this).find("td").hasClass("bgtt")) return;
+					$(this).find("td").css("background-color", "#ffffdd");
+				},
+				function(){
+					if ($(this).find("td").hasClass("bgtt")) return;
+					$(this).find("td").css("background-color", "#fff");
+				}
+		)
+	})
+</script>
+
+
+
+</body>
+</html>

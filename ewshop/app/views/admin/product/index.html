@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ewshop后台管理 - 商品列表</title>
+	<link type="text/css" rel="stylesheet" href="../../app/views/admin/resource/css/style.css" />
+	<script type="text/javascript" src="../../app/views/public/js/jquery.js"></script>
+	<script type="text/javascript" src="../../app/views/public/js/global.js"></script>
+</head>
+<div class="bgimg"></div>
+<div class="pagetop">
+	<div class="head">
+		<div class="logo fl"><img src="../../app/views/admin/resource/images/logo.png" /></div>
+
+		<div class="admin_t fr">
+			<ul>
+				<li><a href="/"><img border=0 src="../../app/views/admin/resource/images/exit4.gif"></a></li>
+				<li><a href="/admin/login/logout" onclick="return confirm('你确定要退出系统吗？')" ><img border=0 src="../../app/views/admin/resource/images/exit3.gif"></a></li>
+			</ul>
+		</div>
+
+		<div class="admin_u fr">
+			<b>欢迎您-</b><a title="" target="_top" href="">admin</a>&nbsp;【超级管理员】 &nbsp;&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="main">
+		<div class="left">
+			<div class="fenlei">
+				<h3>商品管理</h3>
+				<ul>
+
+					<li  ><a href="/admin/category">商品分类</a></li>
+
+					<li  class="sel"  ><a href="/admin/product">商品列表</a></li>
+
+					<li  ><a href="/admin/ask">商品咨询</a></li>
+
+					<li  ><a href="/admin/comment">商品评价</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>交易管理</h3>
+				<ul>
+
+					<li  ><a href="/admin/order">订单管理</a></li>
+
+					<li  ><a href="/admin/payway">支付方式</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>信息管理</h3>
+				<ul>
+
+					<li  ><a href="/admin/aclass">文章分类</a></li>
+
+					<li  ><a href="/admin/article?cid=0">文章列表</a></li>
+
+					<li  ><a href="/admin/page">单页列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>用户管理</h3>
+				<ul>
+
+					<li  ><a href="/admin/user">会员列表</a></li>
+
+					<li  ><a href="/admin/adminuser">管理列表</a></li>
+				</ul>
+			</div>
+			<div class="fenlei">
+				<h3>控制面板</h3>
+				<ul>
+
+					<li  ><a href="/admin/setting">基本信息</a></li>
+
+					<li  ><a href="/admin/link">友情链接</a></li>
+
+					<li  ><a href="/admin/ad">广告列表</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="right">
+			<div class="now">
+				<div class="now_l"></div>
+				<div class="now_m">
+					<span class="fl">商品列表</span>
+					<span class="fr fabu"><a href="/admin/product/add">发布商品</a></span>
+				</div>
+				<div class="now_r"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="search">
+				<div class="fl qiehuan">
+					<a href="/admin/product?state=1" >出售中商品</a>
+					| <a href="/admin/product?state=0" >下架的商品</a>
+				</div>
+				<div class="fr searbox" id="">
+					<form method="get" action="/admin/product?">
+						商品名称：<input type="text" name="name" value="" class="inputtext" />
+						<select name="cid" class="inputselect">
+							<option value="0" selected>--根分类--</option>
+
+							<option  value="14" >
+								&nbsp;
+								|-前沿
+							</option>
+							<option  value="20" >
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								|-区块链
+							</option>
+							<option  value="21" >
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								|-人工智能
+							</option>
+							<option  value="15" >
+								&nbsp;
+								|-前端
+							</option>
+							<option  value="22" >
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								|-小程序
+							</option>
+							<option  value="23" >
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								|-JavaScript
+							</option>
+							<option  value="16" >
+								&nbsp;
+								|-后端
+							</option>
+							<option  value="24" >
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								|-Java
+							</option>
+							<option  value="25" >
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								|-PHP
+							</option>
+							<option  value="26" >
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								|-Python
+							</option>
+							<option  value="27" >
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								&nbsp;
+								|-GoLang
+							</option>
+							<option  value="18" >
+								&nbsp;
+								|-云计算
+							</option>
+							<option  value="19" >
+								&nbsp;
+								|-产品设计
+							</option>
+
+						</select>
+
+						<select name="filter" class="inputselect">
+							<option value="">全部商品</option>
+							<option  value="istuijian|1" >推荐商品</option>
+							<option  value="istj|1" >特价商品</option>
+							<option  value="wlmoney|0" >包邮商品</option>
+							<option  value="num|0" >售空商品</option>
+						</select>
+
+						<select name="orderby" class="inputselect">
+							<option value="">默认排序</option>
+							<option value="clicknum|desc"  > 浏览量(多到少) </option>
+							<option value="clicknum|asc"  > 浏览量(少到多) </option>
+							<option value="sellnum|desc"  > 销售量(多到少) </option>
+							<option value="sellnum|asc"  > 销售量(少到多) </option>
+							<option value="num|desc"  > 库存量(多到少) </option>
+							<option value="num|asc"  > 库存量(少到多) </option>
+							<option value="collectnum|desc"  > 收藏数(多到少) </option>
+							<option value="collectnum|asc"  > 收藏数(少到多) </option>
+							<option value="asknum|desc"  > 咨询数(多到少) </option>
+							<option value="asknum|asc"  > 咨询数(少到多) </option>
+							<option value="commentnum|desc"  > 评价数(多到少) </option>
+							<option value="commentnum|asc"  > 评价数(少到多) </option>
+						</select>
+
+						<input type="submit" value="搜索" class="input2  tjbtn" />
+					</form>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<form method="post" id="form">
+				<table border="0" cellspacing="0" cellpadding="0" class="list">
+					<tr>
+						<td class="bgtt" width="10"><input type="checkbox" name="checkall" onclick="bro_checkall(this, 'id')" /></td>
+						<td class="bgtt" width="50">ID号</td>
+						<td class="bgtt" style="text-align: left">商品名称</td>
+						<td class="bgtt" width="80">商品分类</td>
+						<td class="bgtt" width="80">单价(元)</td>
+						<td class="bgtt" width="80">售出/库存</td>
+						<td class="bgtt" width="50">浏览</td>
+						<td class="bgtt" width="88">操作</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="id[]" value="898" /></td>
+						<td>898</td>
+						<td class="aleft">
+							<span class="fl mar5" style="border:1px solid #ddd"><img src="../../uploads/product/2020-0820-5f3e059c25d7b.png" width="45" height="45"></span>
+							<a class="cblue" href="/product/898" target="_blank">《细说PHP》第4版</a><span class="cred">[荐]</span> <span class="cgreen">[特]</span>		</td>
+						<td class="font13">后端</td>
+						<td><span class="num font16 cred strong">108.0</span></td>
+						<td><span class="font14 corg num strong">4</span>/15</td>
+						<td>10</td>
+						<td>
+							<a href="/admin/product/mod/898" class="admin_edit mar3">修改</a>
+							<a href="/admin/product/del/898" class="admin_del" onclick="confirm('你确定要删除 《细说PHP》第4版 吗？')">删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="id[]" value="897" /></td>
+						<td>897</td>
+						<td class="aleft">
+							<span class="fl mar5" style="border:1px solid #ddd"><img src="../../uploads/product/2020-0820-5f3e084e2b714.png" width="45" height="45"></span>
+							<a class="cblue" href="/product/897" target="_blank">《细说PHP》第2版</a><span class="cred">[荐]</span> <span class="cgreen">[特]</span>		</td>
+						<td class="font13">PHP</td>
+						<td><span class="num font16 cred strong">78.0</span></td>
+						<td><span class="font14 corg num strong">2</span>/98</td>
+						<td>1</td>
+						<td>
+							<a href="/admin/product/mod/897" class="admin_edit mar3">修改</a>
+							<a href="/admin/product/del/897" class="admin_del" onclick="confirm('你确定要删除 《细说PHP》第2版 吗？')">删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="id[]" value="896" /></td>
+						<td>896</td>
+						<td class="aleft">
+							<span class="fl mar5" style="border:1px solid #ddd"><img src="../../uploads/product/2020-0820-5f3e08d935cc4.png" width="45" height="45"></span>
+							<a class="cblue" href="/product/896" target="_blank">《细说网页制作》</a><span class="cred">[荐]</span> <span class="cgreen">[特]</span>		</td>
+						<td class="font13">前端</td>
+						<td><span class="num font16 cred strong">38.0</span></td>
+						<td><span class="font14 corg num strong">4</span>/994</td>
+						<td>4</td>
+						<td>
+							<a href="/admin/product/mod/896" class="admin_edit mar3">修改</a>
+							<a href="/admin/product/del/896" class="admin_del" onclick="confirm('你确定要删除 《细说网页制作》 吗？')">删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="id[]" value="895" /></td>
+						<td>895</td>
+						<td class="aleft">
+							<span class="fl mar5" style="border:1px solid #ddd"><img src="../../uploads/product/2020-0820-5f3e092c2d07f.png" width="45" height="45"></span>
+							<a class="cblue" href="/product/895" target="_blank">《细说JavaScript》</a><span class="cred">[荐]</span> <span class="cgreen">[特]</span>		</td>
+						<td class="font13">JavaScript</td>
+						<td><span class="num font16 cred strong">68.0</span></td>
+						<td><span class="font14 corg num strong">0</span>/100</td>
+						<td>0</td>
+						<td>
+							<a href="/admin/product/mod/895" class="admin_edit mar3">修改</a>
+							<a href="/admin/product/del/895" class="admin_del" onclick="confirm('你确定要删除 《细说JavaScript》 吗？')">删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="id[]" value="894" /></td>
+						<td>894</td>
+						<td class="aleft">
+							<span class="fl mar5" style="border:1px solid #ddd"><img src="../../uploads/product/2020-0820-5f3e152e57d13.png" width="45" height="45"></span>
+							<a class="cblue" href="/product/894" target="_blank">《区块链》</a> <span class="cgreen">[特]</span>		</td>
+						<td class="font13">前沿</td>
+						<td><span class="num font16 cred strong">32.0</span></td>
+						<td><span class="font14 corg num strong">0</span>/12</td>
+						<td>0</td>
+						<td>
+							<a href="/admin/product/mod/894" class="admin_edit mar3">修改</a>
+							<a href="/admin/product/del/894" class="admin_del" onclick="confirm('你确定要删除 《区块链》 吗？')">删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="id[]" value="893" /></td>
+						<td>893</td>
+						<td class="aleft">
+							<span class="fl mar5" style="border:1px solid #ddd"><img src="../../uploads/product/2020-0820-5f3e156b2c657.png" width="45" height="45"></span>
+							<a class="cblue" href="/product/893" target="_blank">《人工智能》</a> <span class="cgreen">[特]</span>		</td>
+						<td class="font13">前沿</td>
+						<td><span class="num font16 cred strong">45.0</span></td>
+						<td><span class="font14 corg num strong">0</span>/2332</td>
+						<td>0</td>
+						<td>
+							<a href="/admin/product/mod/893" class="admin_edit mar3">修改</a>
+							<a href="/admin/product/del/893" class="admin_del" onclick="confirm('你确定要删除 《人工智能》 吗？')">删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="id[]" value="892" /></td>
+						<td>892</td>
+						<td class="aleft">
+							<span class="fl mar5" style="border:1px solid #ddd"><img src="../../uploads/product/2020-0820-5f3e15bc69891.png" width="45" height="45"></span>
+							<a class="cblue" href="/product/892" target="_blank">《机器学习》</a> <span class="cgreen">[特]</span>		</td>
+						<td class="font13">前沿</td>
+						<td><span class="num font16 cred strong">76.0</span></td>
+						<td><span class="font14 corg num strong">0</span>/34</td>
+						<td>0</td>
+						<td>
+							<a href="/admin/product/mod/892" class="admin_edit mar3">修改</a>
+							<a href="/admin/product/del/892" class="admin_del" onclick="confirm('你确定要删除 《机器学习》 吗？')">删除</a>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="bgtt"><input type="checkbox" name="checkall" onclick="bro_checkall(this, 'id')" /></td>
+						<td class="bgtt" colspan="8">
+			<span class="fl">
+				<button href="/admin/product/alldel" onclick="return bro_cfall(this, 'id', 'form', '批量删除')">批量删除</button>
+				<button href="/admin/product/state/1" onclick="return bro_cfall(this, 'id', 'form', '批量上架')">批量上架</button>
+				<button href="/admin/product/state/0" onclick="return bro_cfall(this, 'id', 'form', '批量下架')">批量下架</button>
+				<button href="/admin/product/tuijian/1" onclick="return bro_cfall(this, 'id', 'form', '批量推荐')">批量推荐</button>
+				<button href="/admin/product/tuijian/0" onclick="return bro_cfall(this, 'id', 'form', '取消推荐')">取消推荐</button>
+			</span>
+						</td>
+
+
+
+					</tr>
+					<style>
+						ul.pagination {
+							display: inline-block;
+						}
+						.pagination li {
+							padding:2px 10px;
+							float:left;
+							text-align: center;
+							margin:0 5px;
+							background:#cccccc;
+						}
+						.pagination .active {
+							background:lightskyblue;
+						}
+					</style>
+					<tr>
+						<td style="text-align:center;padding-top:50px;" colspan="9">
+
+							<ul class="pagination"><li class="active"><a href="/admin/product?&amp;num=1">1</a></li><li><a href="/admin/product?&amp;num=2">2</a></li><li><a href="/admin/product?&amp;num=3">3</a></li><li><a href="/admin/product?&amp;num=4">4</a></li><li><a href="/admin/product?&amp;num=5">5</a></li><li><a href="/admin/product?&amp;num=6">6</a></li><li><a href="/admin/product?&amp;num=7">7</a></li><li><a href="/admin/product?&amp;num=8">8</a></li><li><a href="/admin/product?&amp;num=9">9</a></li><li class="disabled"><span>...</span></li><li><a href="/admin/product?&amp;num=35">35</a></li><li><a href="/admin/product?&amp;num=2">下一页 &raquo;</a></li></ul>
+
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+
+		<div class="clear"></div>
+	</div>
+	<div class="foot">Copyright <span class="num">&copy;</span> 2018-2021 <a target="_blank" href="http://www.broshop.com">学习猿地 - <b>eduwork</b></a> 版权所有</div>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		$(".list").find("tr").hover(
+				function(){
+					if ($(this).find("td").hasClass("bgtt")) return;
+					$(this).find("td").css("background-color", "#ffffdd");
+				},
+				function(){
+					if ($(this).find("td").hasClass("bgtt")) return;
+					$(this).find("td").css("background-color", "#fff");
+				}
+		)
+	})
+</script>
+
+
+
+</body>
+</html>		
+
+
